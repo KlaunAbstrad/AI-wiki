@@ -32,6 +32,7 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         'articles/index',
+        'articles/what-is-mcp',
         'articles/reading-list',
         'articles/article-template',
       ],

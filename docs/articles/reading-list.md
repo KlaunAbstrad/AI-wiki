@@ -38,6 +38,9 @@ title: 待读文章清单
 
 - [x] [Attention Is All You Need](../resources/papers/attention-is-all-you-need)
   - 整理时间：2026-05-12
+- [x] [什么是 MCP？](./what-is-mcp) — Model Context Protocol 协议解读
+  - 原文：https://modelcontextprotocol.io/
+  - 整理时间：2026-05-12
 
 ## 整理提示
 
