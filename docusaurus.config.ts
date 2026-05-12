@@ -32,13 +32,6 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/KlaunAbstrad/AI-wiki/edit/main/',
-          lastVersion: 'current',
-          versions: {
-            current: {
-              label: '当前版本',
-              path: '',
-            },
-          },
         },
         blog: {
           showReadingTime: true,
