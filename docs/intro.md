@@ -1,7 +1,6 @@
 ---
 id: intro
 title: 欢迎来到 AI 学习小组
-slug: /
 sidebar_position: 1
 ---
 
@@ -27,9 +26,9 @@ sidebar_position: 1
 
 ## 🚀 快速开始
 
-1. **刚开始学习？** 从 [什么是 AI？](categories/concepts/what-is-ai) 开始
-2. **想找工具？** 查看 [AI 工具推荐](resources/tools)
-3. **有问题？** 在 [Q&A](qa) 搜索或提问
+1. **刚开始学习？** 从 [什么是 AI？](./categories/concepts/what-is-ai) 开始
+2. **想找工具？** 查看 [AI 工具推荐](./resources/tools/ai-tools)
+3. **有问题？** 在 [Q&A](./qa/getting-started) 搜索或提问
 4. **想分享心得？** 写一篇 [博客文章](../blog)
 
 ## 💡 贡献指南

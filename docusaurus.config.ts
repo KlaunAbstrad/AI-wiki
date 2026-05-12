@@ -11,11 +11,10 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://你的用户名.github.io',
+  url: 'https://KlaunAbstrad.github.io',
   baseUrl: '/AI-wiki/',
 
-  // TODO: 创建 GitHub 仓库后替换这些
-  organizationName: 'YOUR_GITHUB_USERNAME',
+  organizationName: 'KlaunAbstrad',
   projectName: 'AI-wiki',
 
   onBrokenLinks: 'warn',
@@ -32,7 +31,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/YOUR_USERNAME/AI-wiki/edit/main/',
+          editUrl: 'https://github.com/KlaunAbstrad/AI-wiki/edit/main/',
           lastVersion: 'current',
           versions: {
             current: {
@@ -46,7 +45,7 @@ const config: Config = {
           feedOptions: {
             type: ['rss', 'atom'],
           },
-          editUrl: 'https://github.com/YOUR_USERNAME/AI-wiki/edit/main/',
+          editUrl: 'https://github.com/KlaunAbstrad/AI-wiki/edit/main/',
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -97,7 +96,7 @@ const config: Config = {
         },
         { to: '/blog', label: '📝 博客', position: 'left' },
         {
-          href: 'https://github.com/YOUR_USERNAME/AI-wiki',
+          href: 'https://github.com/KlaunAbstrad/AI-wiki',
           label: 'GitHub',
           position: 'right',
         },
