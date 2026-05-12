@@ -1,0 +1,108 @@
+/**
+ * Any CSS included here will be global.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #5b8def;
+  --ifm-color-primary-dark: #4a7de0;
+  --ifm-color-primary-darker: #3d6dd1;
+  --ifm-color-primary-darkest: #2b5bb5;
+  --ifm-color-primary-light: #6c9ef5;
+  --ifm-color-primary-lighter: #7dacfa;
+  --ifm-color-primary-lightest: #9dc2fb;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Chinese typography */
+  --ifm-font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --ifm-heading-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  /* Line height for Chinese text */
+  --ifm-line-height-base: 1.8;
+  --ifm-leading-desktop: 1.5;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #6c9ef5;
+  --ifm-color-primary-dark: #5b8def;
+  --ifm-color-primary-darker: #4a7de0;
+  --ifm-color-primary-darkest: #3d6dd1;
+  --ifm-color-primary-light: #7dacfa;
+  --ifm-color-primary-lighter: #9dc2fb;
+  --ifm-color-primary-lightest: #c2d9fd;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Custom Chinese typography */
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4 {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.markdown p {
+  line-height: 1.8;
+}
+
+/* Table styling */
+.markdown table {
+  font-size: 0.9rem;
+}
+
+/* Code block styling */
+.prism-code {
+  font-size: 0.85rem;
+}
+
+/* Navbar styling */
+.navbar__title {
+  font-weight: 600;
+}
+
+/* Sidebar styling */
+.theme-doc-sidebar-menu {
+  font-size: 0.9rem;
+}
+
+/* Bilingual text styling: English terms in parentheses */
+.markdown code {
+  font-size: 0.85em;
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+}
+
+/* Custom scrollbar for code blocks */
+pre::-webkit-scrollbar {
+  height: 8px;
+}
+
+pre::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+pre::-webkit-scrollbar-thumb {
+  background: var(--ifm-color-gray-400);
+  border-radius: 4px;
+}
+
+pre::-webkit-scrollbar-thumb:hover {
+  background: var(--ifm-color-gray-500);
+}
+
+/* Info box styling */
+.theme-admonition {
+  border-radius: 8px;
+}
+
+/* Tag styling */
+.tag {
+  font-size: 0.8rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary-darkest);
+}
