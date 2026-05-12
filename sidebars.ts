@@ -27,9 +27,19 @@ const sidebars: SidebarsConfig = {
   resourcesSidebar: [
     {
       type: 'category',
-      label: '工具推荐',
+      label: '文章摘要',
       collapsible: true,
       collapsed: false,
+      items: [
+        'articles/index',
+        'articles/article-template',
+      ],
+    },
+    {
+      type: 'category',
+      label: '工具推荐',
+      collapsible: true,
+      collapsed: true,
       items: [
         'resources/tools/ai-tools',
       ],
