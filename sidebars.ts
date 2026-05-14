@@ -11,6 +11,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'categories/concepts/what-is-ai',
         'categories/concepts/what-is-llm',
+        'categories/concepts/what-is-mcp',
       ],
     },
     {
@@ -32,7 +33,6 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         'articles/articles-index',
-        'articles/what-is-mcp',
         'articles/reading-list',
         'articles/article-template',
       ],
@@ -44,6 +44,10 @@ const sidebars: SidebarsConfig = {
       collapsed: true,
       items: [
         'resources/tools/ai-tools',
+        'resources/tools/chatgpt',
+        'resources/tools/claude',
+        'resources/tools/cursor',
+        'resources/tools/ollama',
       ],
     },
     {

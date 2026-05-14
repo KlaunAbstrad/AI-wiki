@@ -69,6 +69,4 @@ LLM 是 2020 年以来 AI 领域最重要的突破。
 ## 相关概念
 
 - [什么是大语言模型（LLM）？](./what-is-llm)
-- [什么是机器学习？](./what-is-ml)
-- [什么是深度学习？](./what-is-deep-learning)
 - [什么是 RAG？](../prompt-engineering/what-is-rag)

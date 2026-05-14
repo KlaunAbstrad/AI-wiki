@@ -1,26 +1,19 @@
 ---
 id: what-is-mcp
 title: 什么是 MCP（Model Context Protocol）？
+sidebar_position: 4
 tags: [mcp, protocol, ai-integration, anthropic]
 ---
 
 # 什么是 MCP（Model Context Protocol）？
 
-## 📋 元信息
-
-- **原文链接**：https://modelcontextprotocol.io/
-- **作者**：Anthropic（发起），现为 LF Projects（Linux 基金会）开源项目
-- **发布时间**：2024 年底发布，2025 年快速发展
-- **阅读时长**：约 10 分钟
-- **难度**：进阶
-
-## 📝 一句话总结
+## 一句话总结
 
 **MCP（Model Context Protocol）** 是一个开源标准协议，让 AI 应用（如 Claude、ChatGPT）能够统一、标准化地连接外部数据源和工具。
 
-## 🎯 核心观点
+## 核心观点
 
-### 1. AI 的 "USB-C" 接口
+### AI 的 "USB-C" 接口
 
 MCP 就像是 AI 应用的 **USB-C 端口**：
 
@@ -29,7 +22,7 @@ MCP 就像是 AI 应用的 **USB-C 端口**：
 
 不再需要为每个工具写不同的集成代码，一次开发，到处使用。
 
-### 2. 解决的核心问题
+### 解决的核心问题
 
 在 MCP 之前，AI 应用连接外部系统是这样的：
 
@@ -51,7 +44,7 @@ Claude ──→ MCP 协议 ──→ Slack MCP Server
 ...统一协议，一次对接
 ```
 
-### 3. 三大核心能力
+### 三大核心能力
 
 | 能力 | 说明 | 示例 |
 |------|------|------|
@@ -59,7 +52,7 @@ Claude ──→ MCP 协议 ──→ Slack MCP Server
 | **Resources（资源）** | 提供给 AI 的上下文数据 | 文件内容、数据库 Schema、API 响应 |
 | **Prompts（提示词）** | 可复用的交互模板 | 系统提示词、少样本示例 |
 
-### 4. 架构设计
+### 架构设计
 
 MCP 采用 **客户端-服务器（Client-Server）架构**：
 
@@ -86,7 +79,7 @@ MCP 采用 **客户端-服务器（Client-Server）架构**：
 - **MCP Client**：Host 创建的连接管理器，每个 Server 对应一个 Client
 - **MCP Server**：提供数据/工具的程序，可本地运行或远程部署
 
-### 5. 两层协议设计
+### 两层协议设计
 
 MCP 分为两层：
 
@@ -99,7 +92,7 @@ MCP 分为两层：
 - **STDIO**：本地进程间通信，无网络开销
 - **Streamable HTTP**：远程通信，支持 SSE 流式传输，兼容标准 HTTP 认证
 
-## 💡 对我的启发
+## 对我的启发
 
 ### 为什么 MCP 很重要？
 
@@ -122,28 +115,27 @@ MCP 分为两层：
 - **企业应用**：Chatbot 连接多个数据库，用对话方式分析企业数据
 - **创意工作流**：AI 生成 3D 模型，直接发送到 3D 打印机
 
-## 🔗 相关概念
+## 相关概念
 
-- [什么是 AI？](../categories/concepts/what-is-ai)
-- [什么是 LLM？](../categories/concepts/what-is-llm)
-- [什么是 Agent？](./what-is-agent) *(待添加)*
-- [什么是 RAG？](../categories/prompt-engineering/what-is-rag)
+- [什么是 AI？](./what-is-ai)
+- [什么是 LLM？](./what-is-llm)
+- [什么是 RAG？](../prompt-engineering/what-is-rag)
 
-## ❓ 存疑/待深入
+## 存疑/待深入
 
 1. MCP 与 Function Calling 有什么区别和联系？
 2. MCP Server 的安全性如何保证？（权限控制、沙箱隔离）
 3. 与 LangChain、LlamaIndex 等框架的关系是什么？互补还是竞争？
 4. 目前支持 MCP 的主流工具有哪些？（VS Code、Cursor、Claude Desktop...）
 
-## 📚 延伸阅读
+## 延伸阅读
 
 - [MCP 官方文档](https://modelcontextprotocol.io/)
 - [MCP GitHub 仓库](https://github.com/modelcontextprotocol)
 - [MCP 规范（Specification）](https://modelcontextprotocol.io/specification/2025-06-18/server/resources)
 - [Claude Desktop MCP 集成指南](https://modelcontextprotocol.io/docs/getting-started/quickstart)
 
-## 🛠️ 快速尝试
+## 快速尝试
 
 如果你想体验 MCP：
 
@@ -152,7 +144,3 @@ MCP 分为两层：
 3. 让 Claude 直接操作你的本地文件
 
 或者使用 [MCP Inspector](https://modelcontextprotocol.io/docs/tools/inspector) 来开发和调试 MCP Server。
-
----
-
-*整理时间：2026-05-12*

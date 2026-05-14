@@ -102,14 +102,14 @@ const config: Config = {
           title: '📖 文档',
           items: [
             { label: '开始学习', to: '/docs/intro' },
-            { label: '知识库', to: '/docs/categories/concepts' },
+            { label: '知识库', to: '/docs/intro' },
           ],
         },
         {
           title: '🔗 资源',
           items: [
-            { label: '工具推荐', to: '/docs/resources/tools' },
-            { label: '论文精选', to: '/docs/resources/papers' },
+            { label: '工具推荐', to: '/docs/resources/tools/ai-tools' },
+            { label: '论文精选', to: '/docs/resources/papers/attention-is-all-you-need' },
           ],
         },
         {

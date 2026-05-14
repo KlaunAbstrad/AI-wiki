@@ -9,7 +9,7 @@ A Docusaurus-based knowledge wiki for learning AI together with friends. Primari
 A collaborative learning platform that:
 - Records AI learning notes and concepts
 - Summarizes articles and papers we read
-- Shares useful tools and resources
+- Documents AI tools we use
 - Answers common questions from group members
 - Tracks a reading list of articles to process
 
@@ -32,16 +32,23 @@ AI-wiki/
 │   ├── categories/
 │   │   ├── concepts/              # Core AI concepts
 │   │   │   ├── what-is-ai.md
-│   │   │   └── what-is-llm.md
+│   │   │   ├── what-is-llm.md
+│   │   │   ├── what-is-mcp.md
+│   │   │   └── ...
 │   │   └── prompt-engineering/    # Prompt engineering
 │   │       ├── what-is-prompt-engineering.md
 │   │       └── what-is-rag.md
 │   ├── resources/
-│   │   ├── tools/                 # Tool recommendations
-│   │   │   └── ai-tools.md
+│   │   ├── tools/                 # Tool documentation
+│   │   │   ├── ai-tools.md        # Index/overview
+│   │   │   ├── chatgpt.md
+│   │   │   ├── claude.md
+│   │   │   ├── cursor.md
+│   │   │   ├── ollama.md
+│   │   │   └── ...
 │   │   └── papers/                # Paper summaries
 │   │       └── attention-is-all-you-need.md
-│   ├── articles/                  # Article summaries
+│   ├── articles/                  # External article summaries
 │   │   ├── index.md               # Articles index
 │   │   ├── reading-list.md        # Pending articles
 │   │   ├── article-template.md    # Template for new summaries
@@ -61,17 +68,22 @@ AI-wiki/
 └── .github/workflows/deploy.yml   # Auto-deployment
 ```
 
-## Content Categories
+## Content Categories — Where Things Go
 
-| Category | Path | Purpose |
-|----------|------|---------|
-| **Core Concepts** | `docs/categories/concepts/` | AI fundamentals (什么是 AI, LLM, etc.) |
-| **Prompt Engineering** | `docs/categories/prompt-engineering/` | Prompt techniques, RAG |
-| **Tools** | `docs/resources/tools/` | AI tool recommendations |
-| **Papers** | `docs/resources/papers/` | Academic paper summaries |
-| **Articles** | `docs/articles/` | External article summaries |
-| **Q&A** | `docs/qa/` | Frequently asked questions |
-| **Blog** | `blog/` | Learning reflections |
+| Type | Path | Content | Example |
+|------|------|---------|---------|
+| **概念 (Concept)** | `categories/concepts/` | AI knowledge, definitions | what-is-llm, what-is-mcp, what-is-rag |
+| **工具 (Tool)** | `resources/tools/` | Tool documentation, usage guides | cursor, ollama, chatgpt |
+| **文章 (Article)** | `articles/` | External article summaries | paper解读, 技术教程 |
+| **论文 (Paper)** | `resources/papers/` | Academic paper summaries | Attention Is All You Need |
+| **Q&A** | `qa/` | FAQs | getting-started |
+
+### When to Use Which
+
+- **概念 (Concept)**：想了解 "什么是 X" → 纯知识，不绑定特定产品
+- **工具 (Tool)**：想学怎么用 Cursor/Ollama → 工具使用文档
+- **文章 (Article)**：读了篇好文章想收藏 → 文章摘要
+- **论文 (Paper)**：读了篇学术论文 → 论文笔记
 
 ## Writing Conventions
 
@@ -108,27 +120,7 @@ tags: [tag1, tag2]
 touch docs/categories/concepts/my-concept.md
 ```
 
-```markdown
----
-id: my-concept
-title: 什么是 XXX（What is XXX）?
-sidebar_position: 5
----
-
-# 什么是 XXX（What is XXX）?
-
-## 一句话总结
-
-## 核心观点
-
-1. **第一点**：...
-
-## 相关概念
-
-- [相关概念](../concepts/related-concept)
-```
-
-Then add to `sidebars.ts`:
+Add to `sidebars.ts` under `docsSidebar` → `核心概念`:
 ```ts
 items: [
   'categories/concepts/what-is-ai',
@@ -137,7 +129,25 @@ items: [
 ]
 ```
 
-### 2. Summarize an Article (With Claude)
+### 2. Add a Tool Documentation Page
+
+```bash
+# Create file
+touch docs/resources/tools/my-tool.md
+```
+
+Add to `sidebars.ts` under `resourcesSidebar` → `工具推荐`:
+```ts
+items: [
+  'resources/tools/ai-tools',
+  'resources/tools/chatgpt',
+  'resources/tools/my-tool',  // <-- add here
+]
+```
+
+Update `ai-tools.md` index to add a row in the appropriate table.
+
+### 3. Summarize an Article (With Claude)
 
 **Option A: Direct chat**
 > "帮我整理这篇文章：https://example.com/article"
@@ -148,7 +158,7 @@ items: [
 3. Claude generates `.md` files
 4. Save to `docs/articles/`, register in `sidebars.ts`
 
-### 3. Update the Wiki
+### 4. Update the Wiki
 
 ```bash
 cd AI-wiki
@@ -163,7 +173,7 @@ npm run build
 
 # Commit
 git add .
-git commit -m "Add: article about MCP"
+git commit -m "Add: tool guide for Ollama"
 git push
 
 # GitHub Actions auto-deploys
